@@ -5,12 +5,21 @@
 
 
 @layer base {
+
     body {
-        @apply font-fontbase
+        @apply bg-colorsecondary font-fontbase tracking-wide
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
     }
 
     .container-base {
         @apply container mx-auto
+    }
+
+    .p-base {
+        @apply font-medium text-base md:text-xl
     }
 }
 

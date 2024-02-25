@@ -1,102 +1,42 @@
 import PropTypes from "prop-types";
 
-const CardBlog = () => {
-  const tag = (tagName) => {
-    return (
-      <span className="bg-colorprimary font-semibold text-base md:text-xl px-4 py-3 rounded-xl">
-        {tagName}
-      </span>
-    );
-  };
+import { ButtonItem } from "../components/Navbar";
 
-  return (
-    <div className="card-1 bg-black grid gap-10 col-span-1 row-span-2 p-5 2xl:p-10 rounded-xl">
-      <div className="flex flex-wrap gap-[10px]">
-        {tag("Creative Insights")}
-        {tag("Exploration")}
-        {tag("Education")}
-      </div>
-      <div className="grid gap-5">
-        <h3 className="font-semibold text-colorprimary text-2xl md:text-[40px] leading-normal">
-          Unlocking Creativity Chronicles: Inspiring Tales from the Symposium
-        </h3>
-        <p className="p-base text-white">
-          by <u className="text-colorprimary">Sarah Reynolds</u> - 05 March ,
-          2024
-        </p>
-        <p className="p-base text-white">
-          Dive into the rich tapestry of creativity with our blog,
-          &quot;Unlocking Creativity Chronicles.&quot; Explore insightful
-          articles, behind-the-scenes stories, and captivating tales from the
-          symposium.
-        </p>
-      </div>
-      <div className="w-full flex items-center justify-between">
-        <span className="font-semibold text-white text-2xl md:text-[40px] leading-normal">
-          Blog
-        </span>
-        <svg
-          className="w-10 h-10 md:w-20 md:h-20"
-          viewBox="0 0 80 80"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M47.9781 28.0251L24.8792 28.0251C23.9364 28.0251 23.1606 27.701 22.5517 27.0528C21.9428 26.4046 21.6383 25.6091 21.6383 24.6663C21.6776 23.7628 22.0017 22.987 22.6106 22.3388C23.2195 21.6906 23.9954 21.3665 24.9382 21.3665L56.0509 21.3665C56.5223 21.3665 56.9446 21.4549 57.3178 21.6317C57.691 21.8084 58.0347 22.054 58.349 22.3682C58.6632 22.6825 58.9087 23.0262 59.0855 23.3994C59.2623 23.7726 59.3507 24.1949 59.3507 24.6663L59.3507 55.779C59.3507 56.6433 59.0266 57.3995 58.3784 58.0477C57.7302 58.6959 56.9544 59.0396 56.0509 59.0789C55.1081 59.0789 54.3126 58.7548 53.6644 58.1066C53.0162 57.4584 52.6921 56.6629 52.6921 55.7201L52.6921 32.7391L26.3524 59.0789C25.6845 59.7467 24.8989 60.0806 23.9953 60.0806C23.0918 60.0806 22.3062 59.7467 21.6383 59.0789C20.9705 58.411 20.6366 57.6254 20.6366 56.7218C20.6366 55.8183 20.9705 55.0326 21.6383 54.3648L47.9781 28.0251Z"
-            fill="white"
-          />
-        </svg>
-      </div>
-    </div>
-  );
-};
-
-const CardEvent = ({ title, date, status, pathimage }) => {
+const CardTesti = ({ className, title, testi, pathimage }) => {
   return (
     <div
-      style={{
-        backgroundImage: `url(${pathimage})`,
-        objectFit: "cover",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-      className="bg-black grid gap-10 col-span-1 row-span-1 p-5 2xl:p-10 rounded-xl"
+      className={`bg-black grid sm:grid-cols-2 md:gap-5 ${className} rounded-xl`}
     >
-      <div>
-        <h4 className="font-semibold text-colorprimary text-2xl md:text-[32px] leading-normal pb-1">
-          {title}
-        </h4>
-        <p className="p-base text-white">{date}</p>
+      <div
+        style={{
+          backgroundImage: `url(${pathimage})`,
+          objectFit: "cover",
+          backgroundPosition: "top",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="bg-gray-300 h-[400px] md:h-full flex items-end justify-center rounded-xl"
+      >
+        <ButtonItem
+          className="btn-base w-fit h-fit bg-colorprimary font-semibold text-base mb-8"
+          btnName="Read"
+        />
       </div>
-      <div className="w-full flex items-center self-end justify-between">
-        <button className="flex items-center gap-5 font-semibold text-white text-2xl leading-normal">
-          <span>Event</span>
-          <svg
-            width="30"
-            height="30"
-            viewBox="0 0 80 80"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M47.9781 28.0251L24.8792 28.0251C23.9364 28.0251 23.1606 27.701 22.5517 27.0528C21.9428 26.4046 21.6383 25.6091 21.6383 24.6663C21.6776 23.7628 22.0017 22.987 22.6106 22.3388C23.2195 21.6906 23.9954 21.3665 24.9382 21.3665L56.0509 21.3665C56.5223 21.3665 56.9446 21.4549 57.3178 21.6317C57.691 21.8084 58.0347 22.054 58.349 22.3682C58.6632 22.6825 58.9087 23.0262 59.0855 23.3994C59.2623 23.7726 59.3507 24.1949 59.3507 24.6663L59.3507 55.779C59.3507 56.6433 59.0266 57.3995 58.3784 58.0477C57.7302 58.6959 56.9544 59.0396 56.0509 59.0789C55.1081 59.0789 54.3126 58.7548 53.6644 58.1066C53.0162 57.4584 52.6921 56.6629 52.6921 55.7201L52.6921 32.7391L26.3524 59.0789C25.6845 59.7467 24.8989 60.0806 23.9953 60.0806C23.0918 60.0806 22.3062 59.7467 21.6383 59.0789C20.9705 58.411 20.6366 57.6254 20.6366 56.7218C20.6366 55.8183 20.9705 55.0326 21.6383 54.3648L47.9781 28.0251Z"
-              fill="white"
-            />
-          </svg>
-        </button>
-        <span className="bg-colorprimary font-semibold text-base md:text-xl px-4 py-3 rounded-xl">
-          {status}
-        </span>
+      <div className="w-full flex flex-col gap-5 pl-5 md:pl-0 pr-5 py-5 md:mb-20">
+        <span className="font-medium text-colorprimary text-base">Story</span>
+        <h3 className="font-medium text-colorprimary text-lg md:text-2xl">
+          {title}
+        </h3>
+        <p className="font-medium text-white text-sm">{testi}</p>
       </div>
     </div>
   );
 };
 
-CardEvent.propTypes = {
+CardTesti.propTypes = {
+  className: PropTypes.string,
   title: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
+  testi: PropTypes.string.isRequired,
   pathimage: PropTypes.string.isRequired,
 };
 
@@ -104,18 +44,23 @@ export const Testimonials = () => {
   return (
     <section className="2xl:container-base flex flex-col gap-10 px-5 py-5">
       <div className="grid lg:grid-cols-2 lg:grid-rows-2 gap-5">
-        <CardEvent
-          title="Unlocking Creativity Symposium"
-          date="Saturday, 12 March 2024"
-          status="Open"
-          pathimage="/public/content/img-card-2.png"
+        <CardTesti
+          className="col-span-1 row-span-1"
+          title="A Catalyst for Change. Empowering Stories"
+          testi="Transformative! InsightGathers fueled my startup journey, aiding communities during the pandemic. Grateful beyond words."
+          pathimage="/public/content/user-1.png"
         />
-        <CardBlog />
-        <CardEvent
-          title="Unlock Learning, Embrace Connection"
-          date="Sunday, 12 May 2024"
-          status="Open"
-          pathimage="/public/content/img-card-3.png"
+        <CardTesti
+          className="col-span-1 row-span-2"
+          title="One Great Event For The Better World."
+          testi="Read the story of how Shayna successfully built a startup that assists residents in obtaining aid during the pandemic."
+          pathimage="/public/content/user-2.png"
+        />
+        <CardTesti
+          className="col-span-1 row-span-1"
+          title="Empowering Minds. Unleashing Potential."
+          testi="InsightGathers, a game-changer! Found invaluable connections and insights that propelled my professional journey to new heights."
+          pathimage="/public/content/user-3.png"
         />
       </div>
     </section>

@@ -63,19 +63,19 @@ export const Testimonials = () => {
           className="col-span-1 row-span-1"
           title="A Catalyst for Change. Empowering Stories"
           testi="Transformative! InsightGathers fueled my startup journey, aiding communities during the pandemic. Grateful beyond words."
-          pathimage="./public/content/user-1.png"
+          pathimage="/content/user-1.png"
         />
         <CardTesti
           className="col-span-1 row-span-2"
           title="One Great Event For The Better World."
           testi="Read the story of how Shayna successfully built a startup that assists residents in obtaining aid during the pandemic."
-          pathimage="./public/content/user-2.png"
+          pathimage="/content/user-2.png"
         />
         <CardTesti
           className="col-span-1 row-span-1"
           title="Empowering Minds. Unleashing Potential."
           testi="InsightGathers, a game-changer! Found invaluable connections and insights that propelled my professional journey to new heights."
-          pathimage="./public/content/user-3.png"
+          pathimage="/content/user-3.png"
         />
       </div>
     </section>

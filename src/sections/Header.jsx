@@ -1,13 +1,11 @@
+import { Logo } from "../components/Logo";
 import { Navbar, ButtonItem } from "../components/Navbar";
 
 export const Header = () => {
   return (
     <header className="2xl:container-base fixed inset-0 z-50 bg-colorsecondary h-fit flex items-center justify-between px-5 py-5">
-      <a
-        href="/"
-        className="logo font-extrabold text-xl lg:text-[32px] leading-normal"
-      >
-        InsightGathers.
+      <a href="/" className="logo">
+        <Logo />
       </a>
       <Navbar className="hidden md:flex" />
       <div className="hidden md:flex items-center gap-5">

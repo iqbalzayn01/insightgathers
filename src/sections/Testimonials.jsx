@@ -1,11 +1,26 @@
 import PropTypes from "prop-types";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import { ButtonItem } from "../components/Navbar";
 
 const CardTesti = ({ className, title, testi, pathimage }) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "0.5 1"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+
   return (
-    <div
-      className={`bg-black grid sm:grid-cols-2 md:gap-5 ${className} rounded-xl`}
+    <motion.section
+      ref={ref}
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
+      className={`relative bg-black grid sm:grid-cols-2 md:gap-5 ${className} rounded-xl`}
     >
       <div
         style={{
@@ -29,7 +44,7 @@ const CardTesti = ({ className, title, testi, pathimage }) => {
         </h3>
         <p className="font-medium text-white text-sm">{testi}</p>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

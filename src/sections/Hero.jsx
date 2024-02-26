@@ -16,13 +16,13 @@ export const Hero = () => {
           title="Unlocking Creativity Symposium"
           date="Saturday, 12 March 2024"
           status="Open"
-          pathimage="/public/content/img-card-2.png"
+          pathimage="./public/content/img-card-2.png"
         />
         <CardEvent
           title="Unlock Learning, Embrace Connection"
           date="Sunday, 12 May 2024"
           status="Open"
-          pathimage="/public/content/img-card-3.png"
+          pathimage="./public/content/img-card-3.png"
         />
       </div>
     </section>

@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export const Navbar = ({ className }) => {
+export const Navbar = ({ className, ulclassName }) => {
   return (
     <nav className={`${className}`}>
-      <ul className="flex items-center justify-center gap-2">
+      <ul className={`${ulclassName}`}>
         <li>
           <Link to={"/"} className="hover:text-gray-400 text-sm lg:text-base">
             About
@@ -42,13 +42,19 @@ export const Navbar = ({ className }) => {
 
 Navbar.propTypes = {
   className: PropTypes.string,
+  ulclassName: PropTypes.string,
 };
 
-export const ButtonItem = ({ className, btnName }) => {
-  return <button className={`${className}`}>{btnName}</button>;
+export const ButtonItem = ({ className, btnName, btnToggle }) => {
+  return (
+    <button onClick={btnToggle} className={`${className}`}>
+      {btnName}
+    </button>
+  );
 };
 
 ButtonItem.propTypes = {
   className: PropTypes.string,
   btnName: PropTypes.string.isRequired,
+  btnToggle: PropTypes.func,
 };

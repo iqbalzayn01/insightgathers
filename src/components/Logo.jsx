@@ -14,8 +14,7 @@ export const Logo = () => {
 
   return (
     <motion.svg
-      width="296"
-      height="33"
+      className="w-[160px] lg:w-[296px] h-auto"
       viewBox="0 0 296 33"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

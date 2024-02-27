@@ -5,7 +5,7 @@ export const CardBlog = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["1 0", "1 1"],
+    offset: ["1 0", "1.30 1"],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);

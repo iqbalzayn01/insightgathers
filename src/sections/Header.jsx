@@ -62,12 +62,22 @@ export const Header = () => {
       >
         <motion.div
           variants={sidebar}
-          className="absolute -inset-0 -z-10 bg-colorsecondary w-full h-screen"
+          className="absolute grid -inset-0 -z-10 bg-colorsecondary w-full h-screen"
         >
           <Navbar
-            className="grid justify-center"
-            ulclassName="h-screen flex flex-col justify-center gap-10"
+            className="grid justify-center mt-20"
+            ulclassName="flex flex-col justify-center gap-10"
           />
+          <div className="flex flex-col items-center gap-5">
+            <ButtonItem
+              className="btn-base hover:bg-colorprimary border border-black hover:border-colorprimary font-semibold text-sm lg:text-base"
+              btnName="Sign In"
+            />
+            <ButtonItem
+              className="btn-base bg-black hover:bg-colorprimary font-semibold text-colorprimary hover:text-black text-sm lg:text-base"
+              btnName="Sign Up"
+            />
+          </div>
         </motion.div>
         <MenuMobile toggle={() => toggleOpen()} />
       </motion.div>

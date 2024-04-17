@@ -1,11 +1,11 @@
 import { useRef } from "react";
 import { motion, useCycle } from "framer-motion";
 
-import { useDimensions } from "../components/use-dimensions";
+import { useDimensions } from "../use-dimensions";
 
-import { Logo } from "../components/Logo";
-import { Navbar, ButtonItem } from "../components/Navbar";
-import { MenuMobile } from "../components/MenuMobile";
+import { Logo } from "../Logo";
+import { Navbar, ButtonItem } from "../Navbar";
+import { MenuMobile } from "../MenuMobile";
 
 const sidebar = {
   open: (height = 1000) => ({

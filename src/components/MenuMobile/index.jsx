@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import { ButtonItem } from "./Navbar";
+import { ButtonItem } from "../Navbar";
 
 export const MenuMobile = ({ toggle }) => {
   return (

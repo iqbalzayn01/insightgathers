@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import PropTypes from "prop-types";
 
 export const CardEvent = ({ title, date, status, pathimage }) => {
   const ref = useRef(null);

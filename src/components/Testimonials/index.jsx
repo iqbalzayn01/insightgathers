@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import { ButtonItem } from "../components/Navbar";
+import { ButtonItem } from "../Navbar";
 
 const CardTesti = ({ className, title, testi, pathimage }) => {
   const ref = useRef(null);

@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 
-import { Header } from "../sections/Header";
-import { Hero } from "../sections/Hero";
-import { AboutUs } from "../sections/AboutUs";
-import { Partners } from "../sections/Partners";
-import { Testimonials } from "../sections/Testimonials";
-import { Footer } from "../sections/Footer";
+import { Header } from "../../components/Header";
+import { Hero } from "../../components/Hero";
+import { AboutUs } from "../../components/AboutUs";
+import { Partners } from "../../components/Partners";
+import { Testimonials } from "../../components/Testimonials";
+import { Footer } from "../../components/Footer";
 
-export const Home = () => {
+export default function Home() {
   useEffect(() => {
     const handleWheel = (event) => {
       if (event.ctrlKey || event.metaKey) {
@@ -32,4 +32,4 @@ export const Home = () => {
       <Footer />
     </>
   );
-};
+}

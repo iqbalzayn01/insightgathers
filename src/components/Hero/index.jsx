@@ -1,5 +1,5 @@
-import { CardBlog } from "../components/Blog";
-import { CardEvent } from "../components/Events";
+import { CardBlog } from "../Blog";
+import { CardEvent } from "../Events";
 
 export const Hero = () => {
   return (

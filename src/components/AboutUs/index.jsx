@@ -1,4 +1,4 @@
-import { ButtonItem } from "../components/Navbar";
+import { ButtonItem } from "../Navbar";
 
 export const AboutUs = () => {
   return (

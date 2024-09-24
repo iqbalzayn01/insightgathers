@@ -1,26 +1,28 @@
-import { useRef } from "react";
-import { motion, useCycle } from "framer-motion";
+import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { motion, useCycle } from 'framer-motion';
 
-import { useDimensions } from "../use-dimensions";
+import { useDimensions } from '../use-dimensions';
 
-import { Logo } from "../Logo";
-import { Navbar, ButtonItem } from "../Navbar";
-import { MenuMobile } from "../MenuMobile";
+import { Logo } from '../Logo';
+import CButton from '../CButton';
+import { Navbar, ButtonItem } from '../Navbar';
+import { MenuMobile } from '../MenuMobile';
 
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 100% 100%)`,
     transition: {
-      type: "spring",
+      type: 'spring',
       stiffness: 10,
       restDelta: 2,
     },
   }),
   closed: {
-    clipPath: "circle(30px at 100% 0%)",
+    clipPath: 'circle(30px at 100% 0%)',
     transition: {
       delay: 0.1,
-      type: "spring",
+      type: 'spring',
       stiffness: 100,
       damping: 40,
     },
@@ -31,6 +33,7 @@ export const Header = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+  const navigate = useNavigate();
 
   return (
     <header className="2xl:container-base fixed inset-0 z-50 bg-colorsecondary h-fit flex items-center justify-between px-5 py-5">
@@ -42,10 +45,14 @@ export const Header = () => {
         ulclassName="flex items-center justify-center gap-2"
       />
       <div className="hidden md:flex items-center gap-5">
-        <ButtonItem
+        <CButton
+          action={() => {
+            navigate('/signin');
+          }}
           className="btn-base hover:bg-colorprimary border border-black hover:border-colorprimary font-semibold text-sm lg:text-base"
-          btnName="Sign In"
-        />
+        >
+          Sign In
+        </CButton>
         <ButtonItem
           className="btn-base bg-black hover:bg-colorprimary font-semibold text-colorprimary hover:text-black text-sm lg:text-base"
           btnName="Sign Up"
@@ -55,7 +62,7 @@ export const Header = () => {
       {/* Mobile */}
       <motion.div
         initial={false}
-        animate={isOpen ? "open" : "closed"}
+        animate={isOpen ? 'open' : 'closed'}
         custom={height}
         ref={containerRef}
         className="flex md:hidden"

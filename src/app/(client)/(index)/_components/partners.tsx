@@ -1,11 +1,20 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface ImagesPartnerProps {
   id: number;
 }
 
 const ImagesPartner = ({ id }: ImagesPartnerProps) => {
-  return <img src={`/content/partner-${id}.svg`} alt={`partner ${id}`} />;
+  return (
+    <Image
+      width={100}
+      height={100}
+      src={`/content/partner-${id}.svg`}
+      alt={`partner ${id}`}
+      className="object-cover"
+    />
+  );
 };
 
 export const Partners = () => {

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import ListLink from './list-link';
 
@@ -38,13 +39,31 @@ export const Footer = () => {
           <span className="font-semibold text-base">Social Media</span>
           <ul className="flex gap-10">
             <Link href="/#twitter" className="hover:text-gray-400">
-              <img src="/design/twitter.svg" alt="Social Media" />
+              <Image
+                width={30}
+                height={30}
+                src="/design/twitter.svg"
+                alt="Social Media"
+                className="object-cover"
+              />
             </Link>
             <Link href="/#instagram" className="hover:text-gray-400">
-              <img src="/design/instagram.svg" alt="Social Media" />
+              <Image
+                width={30}
+                height={30}
+                src="/design/instagram.svg"
+                alt="Social Media"
+                className="object-cover"
+              />
             </Link>
             <Link href="/#linkedin" className="hover:text-gray-400">
-              <img src="/design/linkedin.svg" alt="Social Media" />
+              <Image
+                width={30}
+                height={30}
+                src="/design/linkedin.svg"
+                alt="Social Media"
+                className="object-cover"
+              />
             </Link>
           </ul>
         </div>

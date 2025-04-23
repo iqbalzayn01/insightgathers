@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 interface ListLinkProps {
   textLink: string;
@@ -15,10 +17,12 @@ export default function ListLink({
 }: ListLinkProps) {
   return (
     <li>
-      <a href={hRef} className={className}>
+      <Link href={hRef} className={className}>
         {textLink}
-        {pathimage && <img src={pathimage} alt="Social Media" />}
-      </a>
+        {pathimage && (
+          <Image width={30} height={30} src={pathimage} alt="Social Media" />
+        )}
+      </Link>
     </li>
   );
 }

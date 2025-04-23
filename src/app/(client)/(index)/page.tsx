@@ -8,11 +8,7 @@ import { Testimonials } from './_components/testimonials';
 
 export default function Homepage() {
   useEffect(() => {
-    const handleWheel = (event: {
-      ctrlKey: any;
-      metaKey: any;
-      preventDefault: () => void;
-    }) => {
+    const handleWheel = (event: WheelEvent) => {
       if (event.ctrlKey || event.metaKey) {
         event.preventDefault();
       }

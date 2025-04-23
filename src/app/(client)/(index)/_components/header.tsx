@@ -2,12 +2,11 @@
 
 import React, { useRef } from 'react';
 import { motion, useCycle } from 'motion/react';
-
 import { useDimensions } from './use-dimensions';
-
 import { Logo } from './logo';
 import { Navbar, ButtonItem } from './navbar';
 import { MenuMobile } from './menu-mobile';
+import Link from 'next/link';
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -36,9 +35,9 @@ export const Header = () => {
 
   return (
     <header className="2xl:container-base fixed inset-0 z-50 bg-colorsecondary h-fit flex items-center justify-between px-5 py-5">
-      <a href="/" className="logo">
+      <Link href="/" className="logo">
         <Logo />
-      </a>
+      </Link>
       <Navbar
         className="hidden md:flex"
         ulclassName="flex items-center justify-center gap-2"

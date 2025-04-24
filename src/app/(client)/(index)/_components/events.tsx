@@ -17,7 +17,7 @@ export const CardEvent = ({
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['1 0', '1.8 1'],
+    offset: ['1 0', '3 1'],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);

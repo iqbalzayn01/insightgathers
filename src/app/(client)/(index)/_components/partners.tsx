@@ -12,7 +12,7 @@ const ImagesPartner = ({ id }: ImagesPartnerProps) => {
       height={100}
       src={`/content/partner-${id}.svg`}
       alt={`partner ${id}`}
-      className="object-cover"
+      className="aspect-auto object-cover w-fit h-auto"
     />
   );
 };

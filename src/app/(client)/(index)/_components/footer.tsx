@@ -4,7 +4,7 @@ import ListLink from './list-link';
 
 export const Footer = () => {
   return (
-    <footer className="2xl:container-base grid gap-10 px-5 py-5">
+    <footer className="container mx-auto grid gap-10 px-5 py-5">
       <div className="grid md:grid-cols-2 items-end gap-10">
         <div className="flex gap-10">
           <ul className="flex flex-col gap-5">

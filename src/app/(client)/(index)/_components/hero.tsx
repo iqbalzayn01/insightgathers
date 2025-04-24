@@ -4,7 +4,7 @@ import { CardEvent } from './events';
 
 export const Hero = () => {
   return (
-    <section className="2xl:container-base realtive flex flex-col gap-10 px-5 py-5 mt-[90px]">
+    <section className="container mx-auto realtive flex flex-col gap-10 px-5 py-5 mt-[90px]">
       <div className="w-full block">
         <h1 className="font-semibold text-5xl md:text-7xl 2xl:text-8xl mb-1">
           Your Gateway to Knowledge

@@ -55,7 +55,7 @@ const CardTesti = ({ className, title, testi, pathimage }: CardTestiProps) => {
 
 export const Testimonials = () => {
   return (
-    <section className="2xl:container-base flex flex-col gap-10 px-5 py-5">
+    <section className="container mx-auto flex flex-col gap-10 px-5 py-5">
       <div className="grid lg:grid-cols-2 lg:grid-rows-2 gap-5">
         <CardTesti
           className="col-span-1 row-span-1"

@@ -1,16 +1,15 @@
-import { ButtonItem } from './navbar';
+import { Button } from '@/components/ui/button';
 
 export const AboutUs = () => {
   return (
-    <section className="2xl:container-base grid md:grid-cols-2 gap-5 px-5 py-5">
+    <section className="container mx-auto grid md:grid-cols-2 gap-5 px-5 py-5">
       <div className="block">
         <h2 className="font-semibold text-4xl md:text-5xl mb-5">
           Journey with <b className="font-extrabold">InsightGathers</b>
         </h2>
-        <ButtonItem
-          className="btn-base bg-colorprimary font-semibold text-base"
-          btnName="More"
-        />
+        <Button className="btn-base bg-colorprimary font-semibold text-black hover:text-white">
+          More
+        </Button>
       </div>
       <p className="p-base leading-relaxed">
         Welcome to InsightGathers, where insights meet connections. We&apos;re

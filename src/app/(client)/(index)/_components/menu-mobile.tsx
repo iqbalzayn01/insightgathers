@@ -1,5 +1,5 @@
+import { Button } from '@/components/ui/button';
 import React from 'react';
-import { ButtonItem } from './navbar';
 
 interface MenuMobileProps {
   toggle: () => void;
@@ -7,10 +7,12 @@ interface MenuMobileProps {
 
 export const MenuMobile = ({ toggle }: MenuMobileProps) => {
   return (
-    <ButtonItem
-      btnToggle={toggle}
-      className="btn-base border border-black font-semibold text-sm md:text-base"
-      btnName="Menu"
-    />
+    <Button
+      onClick={toggle}
+      variant="outline"
+      className="bg-transparent border border-black font-semibold text-sm md:text-base"
+    >
+      Menu
+    </Button>
   );
 };

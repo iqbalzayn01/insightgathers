@@ -51,7 +51,7 @@ export default function FormSignIn() {
       </div>
       <SubmitButton />
       <p className="text-secondarycolor">
-        Don't have an account?
+        Don&apos;t have an account?
         <Link href="/sign-up" className="font-bold underline">
           Sign Up
         </Link>

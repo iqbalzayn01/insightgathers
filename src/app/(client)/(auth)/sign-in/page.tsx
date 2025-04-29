@@ -1,6 +1,5 @@
 import React from 'react';
 import FormSignIn from './_components/form';
-import Link from 'next/link';
 
 export default function SignInPage() {
   return (

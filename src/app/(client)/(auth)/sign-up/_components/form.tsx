@@ -104,6 +104,9 @@ export default function FormSignUp() {
           Sign In
         </Link>
       </p>
+      <Link href="/" className="text-secondarycolor hover:underline">
+        Back
+      </Link>
     </form>
   );
 }

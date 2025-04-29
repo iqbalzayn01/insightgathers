@@ -56,6 +56,9 @@ export default function FormSignIn() {
           Sign Up
         </Link>
       </p>
+      <Link href="/" className="text-secondarycolor hover:underline">
+        Back
+      </Link>
     </form>
   );
 }

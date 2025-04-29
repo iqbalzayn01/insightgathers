@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function SignUpPage() {
   return (
-    <section className="mx-auto grid h-screen grid-cols-1 lg:grid-cols-2">
+    <section className="container mx-auto h-svh grid grid-cols-1 lg:grid-cols-2 p-5">
       <div
         style={{
           backgroundImage: 'url(/content/img-signup.png)',
@@ -12,7 +12,7 @@ export default function SignUpPage() {
           backgroundRepeat: 'no-repeat',
           objectFit: 'cover',
         }}
-        className="hidden lg:flex flex-col justify-between p-5"
+        className="hidden lg:flex flex-col justify-between p-5 rounded-xl"
       >
         <span className="text-[32px] text-colorprimary font-extrabold">
           InsightGathers.
@@ -39,7 +39,7 @@ export default function SignUpPage() {
         <h1 className="font-bold text-2xl text-zinc-400 text-center">
           Sign Up
         </h1>
-        <h2 className="text-balance text-2xl md:text-5xl lg:text-[64px] text-center font-semibold">
+        <h2 className="text-balance text-2xl md:text-5xl lg:text-6xl text-center font-semibold">
           Expand Your Knowledge & Skills
         </h2>
         <p className="text-balance text-sm md:text-lg lg:text-xl text-center px-0 2xl:px-10">

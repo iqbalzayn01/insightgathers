@@ -71,7 +71,7 @@ export const Footer = () => {
       <hr className="border border-gray-300" />
       <div className="flex flex-col-reverse md:flex-row justify-between gap-5">
         <span className="font-semibold text-base">
-          Copyright © 2024 Iqbal Zayyan All Right Reserved
+          Copyright © 2025 InsightGathers All Right Reserved
         </span>
         <ul className="flex gap-10">
           <ListLink

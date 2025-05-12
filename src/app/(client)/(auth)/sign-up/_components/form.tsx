@@ -102,7 +102,7 @@ export default function FormSignUp() {
         Back
       </Link>
       <p className="text-center text-black">
-        Copyright © 2024 InsightGathers All Right Reserved
+        Copyright © 2025 InsightGathers All Right Reserved
       </p>
     </form>
   );

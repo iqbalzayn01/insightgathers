@@ -4,7 +4,7 @@ import FormSignIn from './_components/form';
 
 export default function SignInPage() {
   return (
-    <section className="container mx-auto h-svh grid grid-cols-1 lg:grid-cols-2 p-5">
+    <section className="container h-full mx-auto grid grid-cols-1 lg:grid-cols-2 p-5">
       <div
         style={{
           backgroundImage: 'url(/content/img-signin.png)',

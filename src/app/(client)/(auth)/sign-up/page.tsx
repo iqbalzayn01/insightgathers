@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function SignUpPage() {
   return (
-    <section className="container mx-auto grid grid-cols-1 lg:grid-cols-2 p-5">
+    <section className="container mx-auto h-full grid grid-cols-1 lg:grid-cols-2 p-5">
       <div
         style={{
           backgroundImage: 'url(/content/img-signup.png)',

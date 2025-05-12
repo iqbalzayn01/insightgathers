@@ -7,7 +7,7 @@ function SubmitButton() {
   return (
     <Button
       type="submit"
-      className="cursor-pointer bg-zinc-800 hover:bg-colorprimary px-5 py-2 text-center text-colorprimary hover:text-zinc-700 mb-2 rounded-lg"
+      className="cursor-pointer bg-zinc-800 hover:bg-colorprimary px-5 py-2 text-center text-white hover:text-zinc-700 mb-2 rounded-lg"
     >
       Sign In
     </Button>
@@ -50,15 +50,12 @@ export default function FormSignIn() {
         />
       </div>
       <SubmitButton />
-      <p className="text-secondarycolor">
-        Don&apos;t have an account?
-        <Link href="/sign-up" className="font-bold underline">
-          Sign Up
-        </Link>
-      </p>
       <Link href="/" className="text-secondarycolor hover:underline">
         Back
       </Link>
+      <p className="text-center text-black">
+        Copyright © 2024 InsightGathers All Right Reserved
+      </p>
     </form>
   );
 }

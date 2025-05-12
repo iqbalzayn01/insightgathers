@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function SignUpPage() {
   return (
-    <section className="container mx-auto h-svh grid grid-cols-1 lg:grid-cols-2 p-5">
+    <section className="container mx-auto grid grid-cols-1 lg:grid-cols-2 p-5">
       <div
         style={{
           backgroundImage: 'url(/content/img-signup.png)',
@@ -12,37 +12,35 @@ export default function SignUpPage() {
           backgroundRepeat: 'no-repeat',
           objectFit: 'cover',
         }}
-        className="hidden lg:flex flex-col justify-between p-5 rounded-xl"
+        className="hidden lg:flex flex-col justify-end p-5 rounded-xl"
       >
-        <span className="text-[32px] text-colorprimary font-extrabold">
+        <h1 className="text-3xl text-white font-semibold">
+          We provide various top-notch events to help you enhance your skills in
+          the field of technology.
+        </h1>
+      </div>
+      <div className="w-full flex flex-col place-content-center gap-5 px-5 md:px-10 py-5">
+        <h2 className="text-balance text-2xl md:text-[32px] text-center font-extrabold">
           InsightGathers.
-        </span>
-        <div className="flex items-end justify-between">
-          <span className="w-1/3 text-colorprimary font-semibold">
-            Copyright © 2024 InsightGathers All Right Reserved
-          </span>
+        </h2>
+        <div className="bg-black w-fit flex p-1.5 rounded-lg self-center gap-2">
           <Link
-            href="#"
-            className="text-colorprimary font-semibold hover:underline"
+            href={'/sign-in'}
+            className="cursor-pointer bg-transparent hover:bg-zinc-800 text-[14px] text-white font-medium px-8 py-2 rounded-[4px]"
           >
-            Terms of Service
+            Sign In
           </Link>
           <Link
-            href="#"
-            className="text-colorprimary font-semibold hover:underline"
+            href={'/sign-up'}
+            className="cursor-pointer bg-colorprimary hover:bg-[#A0C700] text-[14px] text-black font-medium px-8 py-2 rounded-[4px]"
           >
-            Privacy Police
+            Sign Up
           </Link>
         </div>
-      </div>
-      <div className="w-full flex flex-col place-content-center gap-5 px-5 md:px-20 py-5">
-        <h1 className="font-bold text-2xl text-zinc-400 text-center">
-          Sign Up
-        </h1>
-        <h2 className="text-balance text-2xl md:text-5xl lg:text-6xl text-center font-semibold">
+        <h2 className="text-balance text-2xl md:text-3xl text-center font-semibold">
           Expand Your Knowledge & Skills
         </h2>
-        <p className="text-balance text-sm md:text-lg lg:text-xl text-center px-0 2xl:px-10">
+        <p className="text-balance text-base text-center px-0 2xl:px-10">
           We provide various top-notch events to help you enhance your skills in
           the field of technology.
         </p>

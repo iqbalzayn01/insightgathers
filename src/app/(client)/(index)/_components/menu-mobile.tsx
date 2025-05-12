@@ -10,7 +10,7 @@ export const MenuMobile = ({ toggle }: MenuMobileProps) => {
     <Button
       onClick={toggle}
       variant="outline"
-      className="bg-transparent border border-black font-semibold text-sm md:text-base"
+      className="cursor-pointer bg-transparent border border-black font-semibold text-sm md:text-base"
     >
       Menu
     </Button>

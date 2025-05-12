@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-colorsecondary ${montserrat.className} antialiased`}>
+      <body
+        className={`bg-colorsecondary ${montserrat.className} overflow-x-hidden antialiased`}
+      >
         <Header />
         {children}
         <Footer />
